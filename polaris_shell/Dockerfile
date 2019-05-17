@@ -25,6 +25,6 @@ RUN /bin/bash -c "apt-get update && apt-get install -y \
 WORKDIR /usr/polaris
 
 # Should be equiv to CMD /bin/bash -c '. /opt/ros/kinetic/setup.bash; catkin_make;'
-ENTRYPOINT /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /usr/polaris/ros; catkin_make;'
+ENTRYPOINT /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /usr/polaris/ros; /bin/bash'
 
 
