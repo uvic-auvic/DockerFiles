@@ -22,9 +22,9 @@ RUN /bin/bash -c "apt-get update && apt-get install -y \
 
 # Run for building and testing
 
-WORKDIR /usr/polaris
+WORKDIR /var/polaris
 
 # Should be equiv to CMD /bin/bash -c '. /opt/ros/kinetic/setup.bash; catkin_make;'
-ENTRYPOINT /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /usr/polaris/ros; catkin_make;'
+ENTRYPOINT /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd /var/polaris/ros; catkin_make;'
 
 
